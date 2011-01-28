@@ -1,6 +1,12 @@
 Restarter - start-stop-daemon for multiple processes
 ====================================================
 
+Restarter is a simple tool to manage processs similar to forever or unix's start-stop-daemon.  You can cause
+a process to restart simply by touching a file, or prevent a process from dying by setting the keep_alive flag.
+Each process' console output is appended to a log file of your choosing.  There are several tools out there
+like this, but I couldn't find one that managed a list of processes from a single configuration so I wrote
+my own.  We use this tool to restart standalone processes during our capistrano deployment scripts.
+
 
 Quick Example:
 --------------
