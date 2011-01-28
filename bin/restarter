@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-// var restarter = require('restarter'),
-var restarter = require('../lib/index'),
+ var restarter = require('restarter'),
     fs = require('fs'),
     configFilePath = process.argv[2] || '/etc/restarter.conf';
 
