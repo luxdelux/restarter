@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var restarter = require('restarter'),
+    fs = require('fs'),
+    configFilePath = process.argv[2] || '/etc/restarter.conf';
+
+if (fs.statSync(configFilePath).isFile()) {
+ fs.readFile(configFilePath, function(err, data) {
+   var config = JSON.parse(data.toString());
+   restarter.setConfig(config);
+   restarter.startWatching();
+ });
+} else {
+  console.log("Specify the config file as the first argument, or put it in /etc/restarter.conf");
+}

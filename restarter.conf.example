@@ -1,0 +1,20 @@
+{
+  "keep_alive": true,
+  "restartables":
+    [
+      {
+        "command": "node /tmp/test.js",
+        "pid_file": "/tmp/test.pid",
+        "signal": "SIGINT",
+        "log_file": "/tmp/test.log",
+        "watch_file": "/tmp/test.restarter"
+      },
+      {
+        "command": "node /tmp/test2.js",
+        "pid_file": "/tmp/test2.pid",
+        "signal": "SIGINT",
+        "log_file": "/tmp/test2.log",
+        "watch_file": "/tmp/test2.restarter"
+      }
+    ]
+}
