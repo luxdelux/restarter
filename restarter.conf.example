@@ -1,16 +1,20 @@
 {
+  "global_working_directory": "/tmp",
   "global_log_file": "/tmp/restarter_output.log",
+  "global_watch_file": "/tmp/global_watch.restarter",
   "keep_alive": true,
   "restartables":
     [
       {
-        "command": "node /tmp/test.js",
+        "working_directory": "/tmp",
+        "command": "node test.js",
         "pid_file": "/tmp/test.pid",
         "signal": "SIGINT",
         "log_file": "/tmp/test.log",
         "watch_file": "/tmp/test.restarter"
       },
       {
+        "working_directory": "/tmp",
         "command": "node /tmp/test2.js",
         "pid_file": "/tmp/test2.pid",
         "signal": "SIGINT",
