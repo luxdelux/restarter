@@ -1,4 +1,5 @@
 {
+  "global_log_file": "/tmp/restarter_output.log",
   "keep_alive": true,
   "restartables":
     [
