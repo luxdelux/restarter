@@ -4,5 +4,6 @@
   "version": "1.0.0",
   "author": "Dean Mao <dean@luxdelux.com>",
   "directories": { "lib": "./lib" },
-  "engines": { "node": ">= 0.2.4" }
+  "bin": { "restarter": "./bin/restarter" },
+  "engines": { "node": ">= 0.2.5" }
 }
