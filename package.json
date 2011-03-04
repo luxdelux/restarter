@@ -2,7 +2,7 @@
 	"main": "./lib/index",
   "name": "restarter",
   "description": "Start/stop daemon",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "author": "Dean Mao <dean@luxdelux.com>",
   "directories": { "lib": "./lib" },
   "bin": { "restarter": "./bin/restarter" },
