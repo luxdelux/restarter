@@ -6,5 +6,10 @@
   "author": "Dean Mao <dean@luxdelux.com>",
   "directories": { "lib": "./lib" },
   "bin": { "restarter": "./bin/restarter" },
-  "engines": { "node": ">= 0.2.5" }
+  "engines": { "node": ">= 0.4.0" },
+  "dependencies": {
+    "daemon": "= 0.3.0",
+    "emailjs": "= 0.1.6",
+    "optimist": "= 0.1.6"
+  }
 }

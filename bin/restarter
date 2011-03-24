@@ -1,15 +1,25 @@
 #!/usr/bin/env node
 
- var restarter = require('restarter'),
+var restarter = require('restarter'),
     fs = require('fs'),
-    configFilePath = process.argv[2] || '/etc/restarter.conf';
+    argv = require('optimist').argv;
 
-if (fs.statSync(configFilePath).isFile()) {
- fs.readFile(configFilePath, function(err, data) {
-   var config = JSON.parse(data.toString());
-   restarter.setConfig(config);
-   restarter.startWatching();
- });
+if (argv.start) {
+  restarter.server(argv.start);
 } else {
-  console.log("Specify the config file as the first argument, or put it in /etc/restarter.conf");
+  // we are in client mode
+  if (argv.c) {
+    // use specified config file
+    restarter.client(argv._, argv.c)
+  } else {
+    if (!argv._ || argv._.length == 0) {
+      console.log('TODO: help goes here...');
+    } else {
+      try { 
+        restarter.client(argv._)
+      } catch (e) {
+        console.log('TODO: error goes here')
+      }
+    }
+  } 
 }

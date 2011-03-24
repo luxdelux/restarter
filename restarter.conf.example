@@ -1,8 +1,15 @@
 {
   "global_working_directory": "/tmp",
   "global_log_file": "/tmp/restarter_output.log",
+  "global_pid_file": "/tmp/restarter.pid",
   "global_watch_file": "/tmp/global_watch.restarter",
   "keep_alive": true,
+  "email_notification": {
+    user:       "username", 
+    password:   "password", 
+    host:       "smtp.gmail.com", 
+    ssl:        true
+  },
   "restartables":
     [
       {
