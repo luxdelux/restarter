@@ -5,10 +5,12 @@
   "global_watch_file": "/tmp/global_watch.restarter",
   "keep_alive": true,
   "email_notification": {
-    user:       "username", 
-    password:   "password", 
-    host:       "smtp.gmail.com", 
-    ssl:        true
+    "user":       "username", 
+    "password":   "password", 
+    "host":       "smtp.gmail.com", 
+    "ssl":        true,
+    "from":       "someone@example.com",
+    "to":         "another@example.com"
   },
   "restartables":
     [
