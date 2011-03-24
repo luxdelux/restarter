@@ -1,5 +1,6 @@
 {
   "global_working_directory": "/tmp",
+  "daemon_log_file": "/tmp/restarter_daemon_output.log",
   "global_log_file": "/tmp/restarter_output.log",
   "global_pid_file": "/tmp/restarter.pid",
   "global_watch_file": "/tmp/global_watch.restarter",

@@ -13,7 +13,7 @@ if (argv.start) {
     restarter.client(argv._, argv.c)
   } else {
     if (!argv._ || argv._.length == 0) {
-      console.log('Available commands: status, start, stop, reload, exit');
+      console.log('Available commands: status, start, stop, reload, log, exit');
     } else {
       try { 
         restarter.client(argv._)
